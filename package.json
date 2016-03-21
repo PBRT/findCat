@@ -1,0 +1,22 @@
+{
+  "name": "findcat",
+  "version": "1.0.0",
+  "description": "Find your cat in LONDON TFL",
+  "main": "run.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "keywords": [
+    "cat",
+    "London",
+    "tfl",
+    "fp",
+    "redux"
+  ],
+  "author": "PBRT",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "underscore": "^1.8.3"
+  }
+}

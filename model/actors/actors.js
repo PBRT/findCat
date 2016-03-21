@@ -2,11 +2,11 @@
 const initialState = [];
 
 // Helpers
-const randomizeHelper = require('../helpers/randomize.js');
-const connectionsHelper = require('../helpers/connections-helpers.js');
+const randomizeHelper = require('../../helpers/randomize.js');
+const connectionsHelper = require('../../helpers/connections-helpers.js');
 
 // Actions
-const actorsActions = require('../actions/actors.js');
+const actorsActions = require('../../actions/actors.js');
 const INIT_ACTORS = actorsActions.INIT_ACTORS;
 const MOVE_ACTORS = actorsActions.MOVE_ACTORS;
 const MATCH_ACTORS = actorsActions.MATCH_ACTORS;
@@ -19,7 +19,7 @@ module.exports = (action, state) => {
   switch(action.type) {
     case (INIT_ACTORS): return Object.assign({}, {
       catFound: 0,
-      list: Array.apply(null, {length: action.length})
+      list: Array.apply(null, {length: action.length ? action.length : 0})
         .map(item => {
           const randomPositions = randomizeHelper.generateRandomCouple(1,300);
 

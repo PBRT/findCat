@@ -1,7 +1,7 @@
 // Stores
-var stations = require('./stations.js');
-var connections = require('./connections.js');
-var actors = require('./actors.js');
+var stations = require('./stations/stations.js');
+var connections = require('./connections/connections.js');
+var actors = require('./actors/actors.js');
 
 // Actions
 var connectionsActions = require('../actions/connections.js');
