@@ -47,7 +47,7 @@ function run() {
     iterator ++;
 
     // Check the condition
-    condition = ((iterator < 10000) && (appModel.actors.catFound < actorNumber));
+    condition = ((iterator < 100000) && (appModel.actors.catFound < actorNumber));
 
     // Write the execution percentage
     process.stdout.write((iterator/100).toFixed(2) + '%\r');
@@ -64,7 +64,8 @@ function run() {
   const topFiveStations = appModel.stations
     .sort((first, second) => first.visited > second.visited ? -1 : first.visited < second.visited ? 1 : 0)
     .filter((station, index) => index < 5)
-    .reduce((prev, item, index) => prev + (index + 1) + ': ' + item.name + ' (Number of visits: ' + item.visited + ')' +'\n',
+    .reduce((prev, item, index) =>
+      prev + (index + 1) + ': ' + item.name + ' (Number of visits: ' + item.visited + ')' +'\n',
       'TOP FIVE VISITED STATIONS \n');
 
   console.log(topFiveStations);

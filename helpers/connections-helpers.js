@@ -4,12 +4,12 @@ const randomizeHelper = require('./randomize.js');
 // Return if a station is closed
 const isStationClosed = (stations, currentStation) => stations
     .filter(item => item.id === currentStation)
-    .reduce((prev, item) => item.isClosed, false)
+    .reduce((prev, item) => item.isClosed, false);
 
 // Return an array of possible next stations excluding the closed ones
 const getNextPossibleStations = (currentStation, connections, stations) => connections
   .filter(conection => (conection[0] === currentStation) || (conection[1] === currentStation))
-  .reduce((prev, item) =>  prev.concat((item[0] !== currentStation) ? item[0] : item[1]), [])
+  .reduce((prev, item) => prev.concat((item[0] !== currentStation) ? item[0] : item[1]), [])
   .filter(station => !isStationClosed(stations, station));
 
 module.exports = {

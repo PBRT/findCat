@@ -6,7 +6,6 @@ var actors = require('./actors.js');
 const actorsActions = require('../../actions/actors.js');
 const INIT_ACTORS = actorsActions.INIT_ACTORS;
 const MOVE_ACTORS = actorsActions.MOVE_ACTORS;
-const MATCH_ACTORS = actorsActions.MATCH_ACTORS;
 
 const initActorsArray = actors({type: INIT_ACTORS, length: 2});
 const mockedConnections = [
@@ -24,7 +23,7 @@ const mockedStations = [
 describe('Actors store functions', function() {
   describe('Default action', function () {
     it('should empty array if action type not found', function () {
-      assert.equal(actors({type: ''}).length, 0);
+      assert.equal(actors({type: ''}).list.length, 0);
     });
   });
   describe('Init action', function () {
@@ -55,10 +54,10 @@ describe('Actors store functions', function() {
 
       movedActorsArray.list.map((item,index) => {
         if (index === 0) {
-          assert(item.cat === initActorsArray.list[0].cat, true)
-          assert(item.owner.position === initActorsArray.list[0].owner.position, true)
+          assert(item.cat === initActorsArray.list[0].cat, true);
+          assert(item.owner.position === initActorsArray.list[0].owner.position, true);
         } else if (index === 1) {
-          assert(item.owner.position === initActorsArray.list[1].owner.position, false)
+          assert(item.owner.position === initActorsArray.list[1].owner.position, false);
         }
       });
     });

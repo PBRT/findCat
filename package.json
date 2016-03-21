@@ -4,7 +4,7 @@
   "description": "Find your cat in LONDON TFL",
   "main": "run.js",
   "scripts": {
-    "test": "mocha **/**.test.js"
+    "test": "eslint */**.js --ignore-path .gitignore |  mocha **/**.test.js"
   },
   "keywords": [
     "cat",

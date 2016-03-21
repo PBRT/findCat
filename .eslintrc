@@ -3,6 +3,12 @@
     "module": true,
     "exports": true,
     "_": true,
+    "describe": true,
+    "it": true,
+  },
+  "env": {
+    "node": true,
+    "es6": true,
   },
   "rules": {
     "strict": 0, // best would be: [2, "global"]

@@ -1,8 +1,8 @@
 // Initial State
-const initialState = [
+const initialState = {
   catFound: 0,
   list: [],
-];
+};
 
 // Helpers
 const randomizeHelper = require('../../helpers/randomize.js');
@@ -23,7 +23,7 @@ module.exports = (action, state) => {
     case (INIT_ACTORS): return Object.assign({}, {
       catFound: 0,
       list: Array.apply(null, {length: action.length ? action.length : 0})
-        .map(item => {
+        .map(() => {
           const randomPositions = randomizeHelper.generateRandomCouple(1,300);
 
           return Object.assign({}, {
@@ -33,15 +33,18 @@ module.exports = (action, state) => {
               previousPositions: [],
             },
             isCatFound: false,
-          })
+          });
         }),
     });
     case (MOVE_ACTORS): return Object.assign({}, state, {
       list: state.list.map(item => item.isCatFound ? item : Object.assign({}, {
         cat: connectionsHelper.getNextPossibleStations(item.cat, action.connections, action.stations),
         owner: Object.assign({}, {
-          position: connectionsHelper
-            .getNextPossibleStationWithHistory(item.owner.position, action.connections, action.stations, item.owner.previousPositions),
+          position: connectionsHelper.getNextPossibleStationWithHistory(
+            item.owner.position,
+            action.connections,
+            action.stations,
+            item.owner.previousPositions),
           previousPositions: item.owner.previousPositions.concat(item.owner.position),
         }),
         isCatFound: false,
@@ -59,5 +62,5 @@ module.exports = (action, state) => {
       catFound: state.catFound + action.matchNumber,
     });
     default: return state;
-  };
+  }
 };

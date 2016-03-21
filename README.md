@@ -6,7 +6,7 @@ Little node js software for simulating owners and cat try for find each others i
 
 Simply fetch this repository and run ```node run.js {NUMBER_OF_CATS_AND_OWNERS}``` where ```{NUMBER_OF_CATS_AND_OWNERS}```is an positive integer.
 
-There is no dependencies, only for launching tests with Chai, Mocha and Underscore. Not needed if you only want to run it
+There is no dependencies, only for launching tests with Chai, Mocha, Underscore and for linting (eslint). Not needed if you only want to run it.
 
 ## Note
 - I didn't used any external dependencies (ImmutableJS, underscore) for keeping the software as simple as possible.

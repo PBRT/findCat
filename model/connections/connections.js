@@ -15,5 +15,5 @@ module.exports = (action, state) => {
       action.list.map(item => [parseInt(item[0]), parseInt(item[1])]) :
       [];
     default: return state;
-  };
+  }
 };

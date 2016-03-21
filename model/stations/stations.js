@@ -31,5 +31,5 @@ module.exports = (action, state) => {
       return Object.assign({}, station, {visited: station.visited + numberOfVisits.length});
     }) : state;
     default: return state;
-  };
-}
+  }
+};

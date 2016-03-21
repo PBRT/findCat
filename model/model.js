@@ -21,8 +21,7 @@ module.exports = (action, state) => {
       connections: connections(connectionsActions.initConnections(require('../constants/connections.json'))),
       actors: actors(actorsActions.initActors(action.actorNumber)),
     });
-    case (MOVE_MODEL): {
-
+    case (MOVE_MODEL):
       const currentPositions = state.actors.list
         .reduce((prev, item) => prev.concat(item.cat, item.owner.position), []);
 
@@ -30,9 +29,7 @@ module.exports = (action, state) => {
         actors: actors(actorsActions.moveActors(state.connections, state.stations), state.actors),
         stations: stations(stationsActions.updateStations(currentPositions), state.stations),
       });
-    };
-    case (UPDATE_MODEL): {
-
+    case (UPDATE_MODEL):
       // Get the list of stations to close
       const stationsToClose = state.actors.list
         .filter(item => ((item.cat === item.owner.position) && !item.isCatFound))
@@ -43,7 +40,6 @@ module.exports = (action, state) => {
         actors: actors(actorsActions.matchActors(stationsToClose.length), state.actors),
         stations: stations(stationsActions.closeStations(stationsToClose), state.stations),
       });
-    };
     default: return state;
   }
 };

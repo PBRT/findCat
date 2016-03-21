@@ -11,9 +11,9 @@ const UPDATE_STATIONS = stationsActions.UPDATE_STATIONS;
 
 // Constants
 const mockStationsImport = [
-  ["1","Acton Town"],
-  ["2","Aldgate"],
-  ["3","Aldgate East"],
+  ['1','Acton Town'],
+  ['2','Aldgate'],
+  ['3','Aldgate East'],
 ];
 const initStationArray = stations({type: INIT_STATIONS, list: mockStationsImport});
 
