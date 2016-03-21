@@ -1,5 +1,8 @@
 // Initial State
-const initialState = [];
+const initialState = [
+  catFound: 0,
+  list: [],
+];
 
 // Helpers
 const randomizeHelper = require('../../helpers/randomize.js');

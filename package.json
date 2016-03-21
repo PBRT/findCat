@@ -4,7 +4,7 @@
   "description": "Find your cat in LONDON TFL",
   "main": "run.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "mocha **/**.test.js"
   },
   "keywords": [
     "cat",
@@ -16,7 +16,9 @@
   "author": "PBRT",
   "license": "ISC",
   "dependencies": {
-    "chai": "^3.5.0",
-    "underscore": "^1.8.3"
+    "chai": "3.5.0",
+    "eslint": "2.4.0",
+    "mocha": "2.4.5",
+    "underscore": "1.8.3"
   }
 }
