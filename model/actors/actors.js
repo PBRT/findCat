@@ -5,7 +5,7 @@ const initialState = {
 };
 
 // Helpers
-const randomizeHelper = require('../../helpers/randomize.js');
+const randomizeHelper = require('../../helpers/randomize/randomize.js');
 const connectionsHelper = require('../../helpers/connections-helpers.js');
 
 // Actions

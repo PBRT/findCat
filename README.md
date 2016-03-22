@@ -12,4 +12,4 @@ There is no dependencies, only for launching tests with Chai, Mocha, Underscore 
 - I didn't used any external dependencies (ImmutableJS, underscore) for keeping the software as simple as possible.
 - The approach is functionnal. There is a main model of the app, modified by pure functions for preventing unexpected mutations and prevent board effects.
 - It's a REDUX-kind of architecture (actions modifying stores updated in reducers).
--Thanks [XMISSION](https://user.xmission.com/~emailbox/ascii_cats.htm) for the ASCII Art ;)
+- Thanks [XMISSION](https://user.xmission.com/~emailbox/ascii_cats.htm) for the ASCII Art ;)

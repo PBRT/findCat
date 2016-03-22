@@ -1,5 +1,5 @@
 // Helpers
-const randomizeHelper = require('./randomize.js');
+const randomizeHelper = require('./randomize/randomize.js');
 
 // Return if a station is closed
 const isStationClosed = (stations, currentStation) => stations

@@ -50,7 +50,7 @@ function run() {
     condition = ((iterator < 100000) && (appModel.actors.catFound < actorNumber));
 
     // Write the execution percentage
-    process.stdout.write((iterator/100).toFixed(2) + '%\r');
+    process.stdout.write((iterator/1000).toFixed(2) + '%\r');
   }
 
 
