@@ -6,6 +6,10 @@
   "scripts": {
     "test": "eslint */**.js --ignore-path .gitignore |  mocha **/**.test.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PBRT/findCat.git"
+  },
   "keywords": [
     "cat",
     "London",
